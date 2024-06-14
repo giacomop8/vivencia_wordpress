@@ -1,11 +1,7 @@
 <nav id="atras-do-menu">
     <div class="largura_maxima" id="menu">
         <nav class="toggle">
-            <button id="btn-toggle" onclick="mostrarMenu();">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </button>
+            <img src="<?= esc_url( get_template_directory_uri() . '/img/menu.svg' ) ?>" alt="" onclick="mostrarMenu();">
         </nav>
         <?php
            if (has_nav_menu('menu_principal')) {

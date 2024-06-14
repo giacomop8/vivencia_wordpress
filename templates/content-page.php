@@ -7,7 +7,4 @@
             <?php the_content(); ?>
         </div>
     </article>
-    <aside class="menu_home">
-        <?php get_template_part("templates/components/content","menu-lateral"); ?>
-    </aside>
 </section>

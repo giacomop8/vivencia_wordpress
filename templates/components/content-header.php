@@ -16,7 +16,7 @@
             
         </header>
         <div class="fundo_header">
-            <header class="flex between wrap gap_30 container cabecalho_1">
+            <header class="flex around wrap gap_30 align_center pt_20 pb_20">
     
                 <!-- Logomarca da Prefeitura -->
                 <section id="logo_nome">
@@ -31,6 +31,8 @@
                         ?>
                     </a>
                 </section>
+
+                <img class="frase_logo" src="<?= esc_url( get_template_directory_uri() . '/img/logo-frase.svg' ) ?>" alt="">
     
                 <!-- Barra de Pesquisa -->
                 <div id="barra_de_pesquisa" class="flex column gap_20 align_center align_center">
@@ -39,13 +41,15 @@
                         <img src="<?= URL.'/img/facebook.svg'?>" alt="">
                         <img src="<?= URL.'/img/whatsapp.svg'?>" alt="">
                     </div>
-                    <form role="search" method="get" class="search-form flex" action="<?php echo esc_url(home_url('/')); ?>">
-                        <label>
+                    <div class="flex column gap_20 align_center align_center">
+                        <form role="search" method="get" class="flex" action="<?php echo esc_url(home_url('/')); ?>">
                             <span class="screen-reader-text"><?php _e('Search for:', 'textdomain'); ?></span>
-                            <input type="search" class="input_padrao cor_branca" placeholder="<?php echo esc_attr_x('Pesquise aqui...', 'placeholder', 'textdomain'); ?>" aria-label="Search" aria-describedby="button-addon2" name="s" required value="<?php echo get_search_query(); ?>">
-                        </label>
-                        <button type="submit" id="pesquisar" class="search-submit">P</button>
-                    </form>
+                            <input type="search" class="input_padrao pesquisa_input cor_branca" placeholder="<?php echo esc_attr_x('Pesquise aqui...', 'placeholder', 'textdomain'); ?>" aria-label="Search" aria-describedby="button-addon2" name="s" required value="<?php echo get_search_query(); ?>">
+                            <button type="submit" id="pesquisar" class="search-submit">
+                                <img src="<?= URL.'/img/pesquisa.svg'?>" alt="">
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </header>
         </div>
