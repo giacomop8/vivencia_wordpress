@@ -21,6 +21,6 @@
     </section>
     <section class="footer_3 flex justify_around">
         <p>Todos os direitos reservados. Instituto Vivência Sistêmica @ <?php echo $ano_atual; ?></p>
-        <p>Criado por EndecodeTI</p>
+        <p><a href="https://www.endecode.com.br">Criado por EndecodeTI</a></p>
     </section>
 </footer>

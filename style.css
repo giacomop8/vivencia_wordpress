@@ -25,7 +25,7 @@ Version: 0.5;
     margin: 0;
     padding: 0;
     font-size: 1em;
-    font-family: 'Montserrat', 'Open Sans', 'Rubik', 'Calibri';
+    font-family: 'Rubik', 'Open Sans', 'Montserrat';
     word-wrap: break-word;
 }
 html, body{
@@ -354,9 +354,9 @@ html, body{
 }
 /* Titulos */
 .titulo_generico{
-    color: #04233F;
-    font-size: 1.5em;
-    font-weight: 700;
+    color: #594632;
+    font-size: 1.3em;
+    font-weight: 600;
     line-height: 125%;
     text-transform: uppercase;
 }
@@ -370,7 +370,7 @@ html, body{
 .titulo_post{
     font-size: 1.6em;
     font-weight: 800;
-    color: var(--primaria);
+    color: #4C2305;
 }
 /* Inputs */
 input{
@@ -598,7 +598,8 @@ button:hover {
     background-color: #F6CBB5;
     padding: 100px 20px;
     color: #683D13;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 1.1em;
 }
 .sub_apresent{
     max-width: 1100px;
@@ -620,7 +621,6 @@ button:hover {
 #page_home{
     width: 100%;
     position: relative;
-    background: linear-gradient(to bottom, #FFEFB2, #F0DBA3);
 }
 .ondas_rosa_cima{
     position: absolute;
@@ -638,6 +638,10 @@ button:hover {
     bottom: 0;
     right: 0;
 }
+#sistemica{
+    background-color: #fff;
+    padding: 200px 15px;
+}
 .frase_1{
     position: relative;
     z-index: 1;
@@ -646,15 +650,15 @@ button:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
-    width: 750px;
+    width: 850px;
     padding: 20px;
     margin-top: 100px;
-    border-radius: 5px;
-    box-shadow: 6px 6px 1px #00000037;
     background-color: rgba(255, 255, 255, 0.625);
     color: #4C2305;
     font-weight: 300;
-    font-family: 'Barlow';
+    font-size: 1.3em;
+    line-height: 35px;
+    text-align: center;
 }
 .frase_1 p {
     margin: 0;
@@ -671,6 +675,10 @@ button:hover {
     font-weight: 500;
     text-align: center;
     padding: 100px 0;
+}
+#noticias_pai{
+    width: 100%;
+    background: linear-gradient(to bottom, #FFEFB2, #F0DBA3);
 }
 #noticias{
     position: relative;
@@ -826,6 +834,7 @@ button:hover {
 .textual p{
     padding-top: 30px;
     line-height: 30px;
+    font-size: 1.1em;
     margin: 0;
 }
 #pessoas{
@@ -859,7 +868,8 @@ button:hover {
 }
 .bloco p{
     max-width: 300px;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: 1.1em;
     text-align: center;
 }
 #empresa{
@@ -905,7 +915,7 @@ button:hover {
 }
 .servicos{
     position: relative;
-    padding: 300px 0;
+    padding: 100px 0;
     color: #683D14;
     display: flex;
     justify-content: center;
@@ -970,7 +980,7 @@ button:hover {
 
 /* PÁGINA SINGLE */
 .single{
-    max-width: 1100px;
+    max-width: 1200px;
 }
 .flex_post{
     display: flex;
@@ -992,12 +1002,16 @@ button:hover {
 .content{
     width: 70%;
 }
+.conteudo_noticia{
+    font-size: 1.2em;
+    line-height: 30px;
+}
 .sidebar_noticias{
     width: 30%;
 }
 .titulo_news_sidebar{
-    font-size: 1.4em;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 600;
     color: var(--preto-primario);
 }
 .relacionadas_largura_total{
@@ -1025,16 +1039,17 @@ button:hover {
     background-color: var(--primaria);
 }
 .relacionada{
-    background-color: var(--branco-secundario);
-    border: 1px solid var(--branco-terciario);
+    background-color: #725a371a;
+    border: 1px solid #a9541888;
     border-radius: 5px;
     margin-bottom: 20px;
+    padding: 10px;
 }
 .titulo_news_relacionada{
     word-wrap: break-word;
     font-size: 1.1em;
     font-weight: 700;
-    color: var(--primaria);
+    color: #725A37;
     /* display: -webkit-box;
     text-align: justify;
     -webkit-line-clamp: 1;
@@ -1043,7 +1058,7 @@ button:hover {
     text-overflow: ellipsis;
 }
 .relacionadas_thumb{
-    width: 80px;
+    width: 100px;
     height: 100%;
 }
 .descricao_relacionada{
@@ -1109,6 +1124,8 @@ footer p{
 }
 .footer_1 h3{
     color: #594632;
+    font-weight: 500;
+    padding-bottom: 70px;
 }
 .footer_1 strong{
     color: #4C2305;
@@ -1395,6 +1412,13 @@ footer p{
     }
     #barra_de_pesquisa form{
         width: auto;
+    }
+    .imgs_servicos{
+        gap: 20px;
+        flex-direction: column;
+    }
+    .servicos{
+        gap: 30px;
     }
 }
 @media only screen and (max-width: 300px) {

@@ -1,4 +1,23 @@
 <section class="single flex_post gap_30">
+    
+    <div class="content flex column gap_30">
+        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+            <div class="">
+                <?php the_title('<h1 class="titulo_post">', '</h1>'); ?>
+                <?php the_date(); ?>
+            </div>
+            <div class="">
+                <?php the_post_thumbnail('full', array( 'class' => 'thumb_post' )); ?>
+            </div>
+            <div class="conteudo_noticia">
+                <?php the_content(); ?>
+                <script>videoYoutubeResponsivo();</script>
+            </div>
+            <div>
+                <?php (new Documentos())->get_botoes_download(); ?>
+            </div>
+        <?php endwhile; endif; ?>
+    </div>
     <div class="sidebar_noticias">
         <div class="flex column gap_30">
             <aside>
@@ -15,7 +34,7 @@
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail('medium', array('class' => 'relacionadas_thumb'));
                                     } else {
-                                        echo '<img class="relacionadas_thumb"src="' . esc_url(DEFAULT_IMG_POST) . '" alt="Ilustração do link">';
+                                        echo '<img class="relacionadas_thumb"src="' . esc_url(get_template_directory_uri() . '/img/padrao.jpg') . '" alt="Ilustração do link">';
                                     }
                                     
                                     ?>
@@ -46,30 +65,6 @@
                         <?php endwhile; endif; wp_reset_postdata();
                 ?>
             </aside>
-            <aside>
-                <?php
-                    get_template_part("templates/components/content","menu-lateral");
-                ?>
-            </aside>
         </div>
     </div>
-    <div class="content flex column gap_30">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <div class="">
-                <?php the_post_thumbnail('full', array( 'class' => 'thumb_post' )); ?>
-            </div>
-            <div class="">
-                <?php the_title('<h1 class="titulo_post">', '</h1>'); ?>
-                <?php the_date(); ?>
-            </div>
-            <div class="">
-                <?php the_content(); ?>
-                <script>videoYoutubeResponsivo();</script>
-            </div>
-            <div>
-                <?php (new Documentos())->get_botoes_download(); ?>
-            </div>
-        <?php endwhile; endif; ?>
-    </div>
-    
 </section>

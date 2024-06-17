@@ -1,6 +1,3 @@
-<?php 
-    $POST_IMG = get_query_var('imagem_post');
-?>
 <hr>
 <a href="<?=the_permalink()?>">
     <section class="flex_left gap_30" id="container_post">                    
@@ -9,7 +6,7 @@
                 if (has_post_thumbnail()) {
                     the_post_thumbnail('full', array( 'class' => 'thumb_post_pequena' ));
                 } else {
-                    echo '<img src="' . esc_url(DEFAULT_IMG_POST) . '" alt="Ilustração do link">';
+                    echo '<img src="'  . esc_url(get_template_directory_uri() . '/img/padrao.jpg') . '" alt="Ilustração do link">';
                 }
             ?>
         </figure>

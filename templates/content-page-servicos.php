@@ -1,6 +1,14 @@
 <div class="servicos-content">
-    <section class="servicos">
+    <section class="servicos flex column justify_around wrap gap_100">
+        <div class="imgs_servicos width_100 flex justify_around gap_100 wrap">
+            <img src="<?= esc_url( get_template_directory_uri() . '/img/consultoria.svg' ) ?>" alt="Consultoria">
+            <img src="<?= esc_url( get_template_directory_uri() . '/img/treinamentos.svg' ) ?>" alt="Treinamentos">
+        </div>
         <h2>Nossos serviços</h2>  
+        <div class="imgs_servicos width_100 flex justify_around gap_100 wrap">
+            <img src="<?= esc_url( get_template_directory_uri() . '/img/projetos.svg' ) ?>" alt="Projetos">
+            <img src="<?= esc_url( get_template_directory_uri() . '/img/pspp.svg' ) ?>" alt="Parcerias Sociais Público Privadas">
+        </div>
         <img class="linhas-rede" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede.svg' ) ?>" alt="">
         <img class="linhas-rede-b" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede-b.svg' ) ?>" alt="">
     </section>
@@ -132,7 +140,7 @@
             </section>
         </div>
     </section>
-    <img class="ondas_azuis" src="<?= URL . '/img/ondas_azuis.svg' ?>" alt="">
+    <img class="ondas_azuis" src="<?= esc_url( get_template_directory_uri() .  '/img/ondas_azuis.svg' ) ?>" alt="">
     <section class="pt_100 pb_100 flex column align_center">
         <?php get_template_part('templates/components/content','formulario'); ?>
     </section>
