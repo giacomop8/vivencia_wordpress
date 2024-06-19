@@ -15,7 +15,6 @@ if(!class_exists('Noticias')){
                 'order' => 'DESC'           // Ordem decrescente (da mais recente para a mais antiga)
             );
             $query = new WP_Query($args);
-
         
             /* Se existirem posts */
             if ($query->have_posts()) {
@@ -27,6 +26,7 @@ if(!class_exists('Noticias')){
                         $post_count++;
                     ?>
                         <div class="post_box">
+                            <div class="post_transparente"></div>
                             <a href="<?php the_permalink(); ?>">
                                 <?php if (has_post_thumbnail()) :
                                     the_post_thumbnail('medium', array('class' => 'post_thumb'));
@@ -36,26 +36,28 @@ if(!class_exists('Noticias')){
                             </a>
                             <div class="post_title">
                                 <a href="<?php the_permalink(); ?>">
-                                    <?php
-                                    $title = get_the_title();
-                                    $max_characters = 50;
-                                    if (mb_strlen($title) > $max_characters) {
-                                        $shortened_title = mb_substr($title, 0, $max_characters) . '...';
-                                    } else {
-                                        $shortened_title = $title;
-                                    }
-                                    echo $shortened_title;
-                                    ?>
+                                    <span>
+                                        <?php
+                                        $title = get_the_title();
+                                        $max_characters = 50;
+                                        if (mb_strlen($title) > $max_characters) {
+                                            $shortened_title = mb_substr($title, 0, $max_characters) . '...';
+                                        } else {
+                                            $shortened_title = $title;
+                                        }
+                                        echo $shortened_title;
+                                        ?>
+                                    </span>
                                 </a>
                                 <br>
                                 <p><?php the_time('d - F, Y'); ?></p>
                             </div>
-                            <div class="post_excerpt">
+                            <!-- <div class="post_excerpt">
                                 <p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 20)); ?></p>
-                            </div>
-                            <div class="post_saiba_mais">
+                            </div> -->
+                            <!-- <div class="post_saiba_mais">
                                 <a href="<?php the_permalink(); ?>"><button class="btn_padrao">SAIBA MAIS</button></a>
-                            </div>
+                            </div> -->
                         </div>
                     <?php endwhile; ?>
                 </div>

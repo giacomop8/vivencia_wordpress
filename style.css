@@ -4,17 +4,18 @@ Theme name: Site Institucional;
 
 Theme URI: Site Modelo de Instituição, contém blog, categorias de assuntos, formulários e muito mais;
 
-Author: Giácomo Pereira e Cézar Azevedo;
+Author: Giácomo Pereira;
 
 Author URI: https://www.endecode.com.br;
 
 Github Theme URI: ;
 
-Description: Site Modelo de Instituição, contém blog, categorias de assuntos, formulários e muito mais;
+Description: Website institucional, blog e empresarial;
 
-Version: 0.5;
+Version: 1;
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -25,7 +26,7 @@ Version: 0.5;
     margin: 0;
     padding: 0;
     font-size: 1em;
-    font-family: 'Rubik', 'Open Sans', 'Montserrat';
+    font-family: 'Dosis', 'Rubik', 'Open Sans', 'Montserrat';
     word-wrap: break-word;
 }
 html, body{
@@ -58,7 +59,7 @@ html, body{
     flex-wrap: wrap;
 }
 .largura_maxima{
-    max-width: 1180px;
+    width: 80%;
     margin: auto;
 }
 .relative{
@@ -371,6 +372,7 @@ html, body{
     font-size: 1.6em;
     font-weight: 800;
     color: #4C2305;
+    font-family: 'Barlow';
 }
 /* Inputs */
 input{
@@ -447,7 +449,9 @@ button:hover {
 
 /* Logomarca e Nome */
 .fundo_header header{
-    display: flex;
+    display: grid;
+    gap: 30px; /* Espaçamento entre os posts */
+    grid-template-columns: repeat(3, 1fr);
     background-color: #fff;
     width: 100%;
 }
@@ -457,13 +461,20 @@ button:hover {
 #logo_nome a{
     text-decoration: none;
     color: var(--preto-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #logo_nome strong{
     font-weight: 800;
     font-size: 1.2em;
 }
+#logo_nome img{
+    width: 110px;
+    height: 130px;
+}
 .frase_logo{
-    width: 500px;
+    width: 400px;
 }
 /* Barra de Pesquisa */
 #pesquisar{
@@ -482,6 +493,7 @@ button:hover {
 .pesquisa_input{
     border: 2px solid #aa6b0d46;
     border-top-left-radius: 15px;
+    width: 200px;
     border-bottom-left-radius: 15px;
 }
 /* Menu */
@@ -598,8 +610,8 @@ button:hover {
     background-color: #F6CBB5;
     padding: 100px 20px;
     color: #683D13;
-    font-weight: 300;
-    font-size: 1.1em;
+    font-weight: 400;
+    font-size: 1.2em;
 }
 .sub_apresent{
     max-width: 1100px;
@@ -613,7 +625,7 @@ button:hover {
     line-height: 2em;
 }
 .sub_apresent aside p strong{
-    font-weight: 700;
+    font-weight: 900;
 }
 .sub_apresent img{
     max-width: 100%;
@@ -640,7 +652,7 @@ button:hover {
 }
 #sistemica{
     background-color: #fff;
-    padding: 200px 15px;
+    padding: 150px 15px;
 }
 .frase_1{
     position: relative;
@@ -650,13 +662,13 @@ button:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
-    width: 850px;
+    max-width: 850px;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: rgba(255, 255, 255, 0.625);
     color: #4C2305;
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 35px;
     text-align: center;
 }
@@ -666,7 +678,7 @@ button:hover {
     word-wrap: break-word;
 }
 .frase_1 strong{
-    font-weight: 500;
+    font-weight: 800;
     font-size: 1.1em;
 }
 .titulo{
@@ -685,6 +697,7 @@ button:hover {
     z-index: 1;
 }
 .form_contato{
+    font-size: 1.2em;
     width: 600px;
     color: #4C2305;
 }
@@ -730,11 +743,15 @@ button:hover {
 }
 .post_box{
     background-color: #fff;
-    border: 2px solid #eadba8;
+    border: 4px solid #eadba8;
     border-radius: 5px;
     box-shadow: 6px 6px 1px #00000036;
     overflow: hidden;
     box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    
+    height: 300px;
 }
 .full-width {
     width: 100%;
@@ -750,32 +767,54 @@ button:hover {
     display: inline-block;
     vertical-align: top;
 }
-.post_thumb{
-    width: 100%;
+.post_transparente{
     height: 200px;
-    object-fit: cover;
-}
-.img_padrao{
     width: 100%;
-    max-height: 200px;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(to bottom, #00000000, #0000008b, #0000008b);
+}
+.post_thumb, .img_padrao{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
     object-fit: cover;
 }
 .post_excerpt{
     font-size: 0.9em;
     padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 3;
 }
 .post_title{
     padding: 0 20px;
     margin-top: 20px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
 }
 .post_data{
     padding: 0 20px;
 }
 .post_title a{
-    color: #683D13;
-    font-size: 1.05em;
+    color: white;
+    font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 600;
+    text-shadow: 2px 2px 1px #00000072;
+    transition: 0.2s;
+}
+.post_title a:hover{
+    color: #DEBA00;
+}
+.post_title span{
+    font-weight: 800;
+    font-family: 'Barlow';
 }
 .post_saiba_mais{
     padding: 0 20px 20px 20px;
@@ -784,13 +823,13 @@ button:hover {
     display: flex;
     flex-direction: column;
 }
-.outros_posts .post_thumb{
+/* .outros_posts .post_thumb{
     width: 100%;
     height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 .outros_posts .post_title a{
     font-size: 0.9em;
 }
@@ -830,6 +869,7 @@ button:hover {
 .textual .titulo-quem-somos{
     font-size: 1.8em;
     font-weight: 700;
+    font-family: 'Barlow';
 }
 .textual p{
     padding-top: 30px;
@@ -882,8 +922,8 @@ button:hover {
     width: 400px;
 }
 #empresa aside h1{
-    font-weight: 800;
-    font-size: 1.3em;
+    font-weight: 700;
+    font-size: 1.4em;
 }
 .visao{
     overflow: hidden;
@@ -892,7 +932,7 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 30px;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .missao{
     background-color: #F6DF79;
@@ -903,7 +943,7 @@ button:hover {
     font-size: 1.3em;
 }
 .valores{
-    background-color: #FEEFB6;
+    background-color: #FEECB0;
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -923,8 +963,20 @@ button:hover {
     text-align: center;
 }
 .servicos h2{
-    font-weight: 700;
+    color: #725A37;
+    font-weight: 600;
+    font-size: 2em;
     padding: 15px;
+}
+.icones_servicos{
+    position: relative;
+    z-index: 1;
+    
+    opacity: 0; /* inicialmente invisível */
+    transition: opacity 1.5s ease-in-out; /* transição suave de opacidade */
+}
+.icones_servicos.visible {
+    opacity: 1; /* imagem visível */
 }
 .perguntas{
     width: 100%;
@@ -956,13 +1008,17 @@ button:hover {
     cursor: pointer;
 }
 .linhas-rede{
+    opacity: 0.7;
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
 }
 .linhas-rede-b{
+    opacity: 0.7;
     position: absolute;
     bottom: 0;
+    height: 100%;
     width: 100%;
 }
 /* PAGINAS */
@@ -980,7 +1036,7 @@ button:hover {
 
 /* PÁGINA SINGLE */
 .single{
-    max-width: 1200px;
+    width: 90%;
 }
 .flex_post{
     display: flex;
@@ -1040,22 +1096,17 @@ button:hover {
 }
 .relacionada{
     background-color: #725a371a;
-    border: 1px solid #a9541888;
-    border-radius: 5px;
+    border: 1px solid #a9541827;
     margin-bottom: 20px;
     padding: 10px;
 }
 .titulo_news_relacionada{
     word-wrap: break-word;
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: 900;
     color: #725A37;
-    /* display: -webkit-box;
-    text-align: justify;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical; */
+    font-family: 'Barlow';
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 .relacionadas_thumb{
     width: 100px;
@@ -1176,7 +1227,7 @@ footer p{
 }
 .page-numbers .prev,
 .page-numbers .next{
-    background-color: var(--primaria);
+    background-color: #683D13;
     color: var(--branco-primario);
     padding: 8px;
     border-radius: 5px;
@@ -1273,6 +1324,10 @@ footer p{
     
 }
 @media only screen and (max-width: 900px) {
+    .fundo_header header{
+        grid-template-columns: 1fr; /* Uma coluna ocupando toda a largura */
+        grid-template-rows: auto; /* As linhas serão automáticas */
+    }
     .home{
         flex-direction: column;
     }
@@ -1303,6 +1358,9 @@ footer p{
     .sub_apresent{
         flex-direction: column-reverse;
     }
+    .logo-transparente{
+        width: 60%;
+    }
 }
 @media only screen and (max-width: 800px) {
     #banner_home_img img {
@@ -1321,9 +1379,6 @@ footer p{
     }
     #page_home{
         padding: 25px;
-    }
-    .frase_1{
-        width: auto;
     }
     #pessoas .bloco{
         flex-direction: column;
@@ -1372,6 +1427,16 @@ footer p{
     .posts-container {
         grid-template-columns: 1fr;
     }
+    .linhas-rede{
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+    }
+    .linhas-rede-b{
+        position: absolute;
+        bottom: 0;
+        object-fit: cover;
+    }
     .footer_2{
         flex-direction: column;
         padding: 15px;
@@ -1415,7 +1480,9 @@ footer p{
     }
     .imgs_servicos{
         gap: 20px;
-        flex-direction: column;
+    }
+    .imgs_servicos img{
+        width: 100px;
     }
     .servicos{
         gap: 30px;

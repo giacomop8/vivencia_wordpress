@@ -8,29 +8,21 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <header class="flex_center gap_20 acessibilidade">
-            
-        </header>
         <div class="fundo_header">
-            <header class="flex around wrap gap_30 align_center pt_20 pb_20">
+            <header class="align_center around pt_20 pb_20">
     
                 <!-- Logomarca da Prefeitura -->
-                <section id="logo_nome">
-                    <a class="flex_center wrap" href="<?= home_url(); ?>">
-                        <?php
-                            if ( function_exists( 'the_custom_logo' ) ) {
-                                the_custom_logo();
-                            } else {
-                                // Caso não exista uma logomarca definida, você pode mostrar um texto alternativo ou outra imagem.
-                                echo '<img src="' . esc_url( get_template_directory_uri() . '/images/default-logo.png' ) . '" alt="Logo Padrão">';
-                            }
-                        ?>
+                <div id="logo_nome">
+                    <a class="flex align_center" href="<?php home_url(); ?>">
+                        <?php if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } ?>
                     </a>
-                </section>
+                </div>
 
-                <a class="flex_center wrap" href="<?= home_url(); ?>">
-                    <img class="frase_logo" src="<?= esc_url( get_template_directory_uri() . '/img/logo-frase.svg' ) ?>" alt="Instituto Vivência Sistêmica">
-                </a>
+                <div>
+                    <a class="flex_center wrap" href="<?php home_url(); ?>">
+                        <img class="frase_logo" src="<?= esc_url( get_template_directory_uri() . '/img/logo-frase.svg' ) ?>" alt="Instituto Vivência Sistêmica">
+                    </a>
+                </div>
     
                 <!-- Barra de Pesquisa -->
                 <div id="barra_de_pesquisa" class="flex column gap_20 align_center align_center">

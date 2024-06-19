@@ -1,16 +1,27 @@
 <div class="servicos-content">
+    <script>
+        // Adiciona a classe 'visible' às imagens quando a página é carregada
+        document.addEventListener("DOMContentLoaded", function() {
+            var imagens = document.querySelectorAll('.icones_servicos');
+            imagens.forEach(function(imagem, index) {
+                setTimeout(function() {
+                    imagem.classList.add('visible');
+                }, index * 200); // ajusta o delay conforme necessário
+            });
+        });
+    </script>
     <section class="servicos flex column justify_around wrap gap_100">
         <div class="imgs_servicos width_100 flex justify_around gap_100 wrap">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/consultoria.svg' ) ?>" alt="Consultoria">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/treinamentos.svg' ) ?>" alt="Treinamentos">
+            <img class="icones_servicos" src="<?= esc_url( get_template_directory_uri() . '/img/consultoria.svg' ) ?>" alt="Consultoria">
+            <img class="icones_servicos" src="<?= esc_url( get_template_directory_uri() . '/img/treinamentos.svg' ) ?>" alt="Treinamentos">
         </div>
         <h2>Nossos serviços</h2>  
         <div class="imgs_servicos width_100 flex justify_around gap_100 wrap">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/projetos.svg' ) ?>" alt="Projetos">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/pspp.svg' ) ?>" alt="Parcerias Sociais Público Privadas">
+            <img class="icones_servicos" src="<?= esc_url( get_template_directory_uri() . '/img/projetos.svg' ) ?>" alt="Projetos">
+            <img class="icones_servicos" src="<?= esc_url( get_template_directory_uri() . '/img/pspp.svg' ) ?>" alt="Parcerias Sociais Público Privadas">
         </div>
-        <img class="linhas-rede" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede.svg' ) ?>" alt="">
-        <img class="linhas-rede-b" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede-b.svg' ) ?>" alt="">
+        <img class="linhas-rede" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede.png' ) ?>" alt="">
+        <img class="linhas-rede-b" src="<?= esc_url( get_template_directory_uri() . '/img/linhas-rede-b.png' ) ?>" alt="">
     </section>
     <section class="perguntas">
         <div class="perguntas_limite">

@@ -13,9 +13,6 @@
                 <?php the_content(); ?>
                 <script>videoYoutubeResponsivo();</script>
             </div>
-            <div>
-                <?php (new Documentos())->get_botoes_download(); ?>
-            </div>
         <?php endwhile; endif; ?>
     </div>
     <div class="sidebar_noticias">
@@ -25,26 +22,18 @@
                 <?php
                     $categories = get_the_category();
                     $category_name = $categories[0]->name;
-                    $args = array('posts_per_page'=>7,'category_name'=>$category_name);
+                    $args = array('posts_per_page'=>10,'category_name'=>$category_name);
                     $query = new WP_Query( $args );
                     if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
                         <div class="relacionada">
                             <div class="flex gap_10">
-                                <?php 
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('medium', array('class' => 'relacionadas_thumb'));
-                                    } else {
-                                        echo '<img class="relacionadas_thumb"src="' . esc_url(get_template_directory_uri() . '/img/padrao.jpg') . '" alt="Ilustração do link">';
-                                    }
-                                    
-                                    ?>
                                 <a class="espacamento_lateral_10" href="<?=the_permalink()?>">
                                     <?php
                                         // Obtém o título
                                         $title = get_the_title();
                                         
                                         // Define o número máximo de caracteres que você deseja mostrar
-                                        $max_characters = 40; // Altere para o valor desejado
+                                        $max_characters = 70; // Altere para o valor desejado
                                         
                                         // Verifica se o comprimento do título é maior que o máximo permitido
                                         if (mb_strlen($title) > $max_characters) {
