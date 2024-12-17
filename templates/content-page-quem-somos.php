@@ -25,30 +25,55 @@
             <div class="perfil">
                 <img src="<?= esc_url( get_template_directory_uri() . '/img/edson.jpg' ) ?>" alt="">
                 <h5>Edson</h5>
-                <p>Especialista em Políticas Públicas, Sociais e Gestão de Conflitos.</p>
+                <p>Especialista em Prestação de Contas de Convênios, Elaboração e Acompanhamento de Projetos Especiais, Gestão de Processos Operacionais e Logísticos, Controle de Receitas e Despesas, e Gerenciamento de Tarefas Administrativas Essenciais.</p>
             </div>
         </div>
     </section>
     <section id="empresa">
-        <div class="visao">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/visao.jpg' ) ?>" alt="">
+        <div class="visao align_center">
+            <div>
+                <img src="<?= esc_url( get_template_directory_uri() . '/img/visao.jpg' ) ?>" alt="">
+            </div>
             <aside>
-                <h1>Visão</h1>
-                <p>Ser referência no desenvolvimento de estratégias com visão sistêmica e empreendedora no planejamento, gestão, apoio a programas e projetos públicos e privados.</p>
+                <h1>Nossa Visão</h1><br>
+                <p>Ser referência no desenvolvimento de estratégias com visão sistêmica e empreendedora, no planejamento, gestão e apoio a programas e projetos públicos e privados.</p>
             </aside>
         </div>
-        <div class="missao">
+        <div class="missao align_center">
             <aside>
-                <h1>Missão</h1>
-                <p>Contribuir na promoção do desenvolvimento integrado, como visão sistêmica e empreendedora em instituições públicas, empresas e pessoas</p>
+                <h1>Nossa Missão</h1><br>
+                <p>Contribuir para a promoção do desenvolvimento integrado, com uma visão sistêmica e empreendedora, em instituições públicas, empresas e para pessoas.</p>
             </aside>
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/missao.jpg' ) ?>" alt="">
+            <div>
+                <img src="<?= esc_url( get_template_directory_uri() . '/img/missao.jpg' ) ?>" alt="">
+            </div>
         </div>
-        <div class="valores">
-            <img src="<?= esc_url( get_template_directory_uri() . '/img/valores.jpg' ) ?>" alt="">
+        <div class="valores align_center">
+            <div>
+                <img src="<?= esc_url( get_template_directory_uri() . '/img/valores.jpg' ) ?>" alt="">
+            </div>
             <aside>
-                <h1>Valores</h1>
-                <p>Integração, Empreendedorismo, Inovação, Colaboração, Cooperação, Transparência</p>
+                <h1>Nossos Valores</h1><br>
+                <ul>
+                    <li>
+                        <strong>Integração:</strong> Trabalhamos de forma integrada com todos os setores para promover um desenvolvimento holístico.
+                    </li>
+                    <li>
+                        <strong>Empreendedorismo:</strong> Incentivamos a inovação e o espírito empreendedor em todas as nossas atividades.
+                    </li>
+                    <li>
+                        <strong>Inovação:</strong> Buscamos constantemente novas soluções e práticas para melhor atender nossos clientes.
+                    </li>
+                    <li>
+                        <strong>Colaboração:</strong> Valorizamos a cooperação entre equipes e parceiros para alcançar resultados mais efetivos.
+                    </li>
+                    <li>
+                        <strong>Cooperação:</strong> Acreditamos no poder do trabalho conjunto para construir um futuro melhor.
+                    </li>
+                    <li>
+                        <strong>Transparência:</strong> Atuamos com clareza e ética em todas as nossas ações.
+                    </li>
+                </ul>
             </aside>
         </div>
     </section>

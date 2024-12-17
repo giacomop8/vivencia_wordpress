@@ -14,6 +14,9 @@
         <div class="carousel-item">
             <img class="d-block w-100 img_slide" src="<?= URL . '/img/slide_3.jpg' ?>" alt="Third slide">
         </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 img_slide" src="<?= URL . '/img/slide_4.jpg' ?>" alt="Fourt slide">
+        </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
